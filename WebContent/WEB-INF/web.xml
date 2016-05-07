@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0"-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>phones</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<!--  Client registration servlet -->  
+
+  <servlet>
+    <servlet-name>ClientRegistrationServlet</servlet-name>
+    <servlet-class>phones.servlets.clientRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientRegistrationServlet</servlet-name>
+    <url-pattern>/registrationPath</url-pattern>
+  </servlet-mapping>
+
+<!--  Login servlet -->
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>phones.servlets.loginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginPath</url-pattern>
+  </servlet-mapping>
+  
+<!--  Upload servlet -->
+ 
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>phones.servlets.uploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/uploadPath</url-pattern>
+  </servlet-mapping>
+  
+<!--  Logout servlet -->
+  
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>phones.servlets.logoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logoutPath</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
